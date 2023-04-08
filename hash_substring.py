@@ -4,9 +4,11 @@
 B = 13
 
 def get_hash(text: str) -> int:
+    text_len = len(text)
+
     hash = 0
-    for i in range(1, len(text)):
-        hash += ord(text[i - 1]) * B**(len(text) - i)
+    for i in range(text_len):
+        hash += ord(text[i]) * B**(text_len - i)
         
     return hash
 
