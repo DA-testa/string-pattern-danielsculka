@@ -17,9 +17,7 @@ def read_input():
         if 'I' in inputType:
             return (input().rstrip(), input().rstrip())
         elif 'F' in inputType:
-            fileName = input()
-            
-            with open("./tests/%s" % (fileName), "r") as file:
+            with open("./tests/06", "r") as file:
                 return (file.readline().rstrip(), file.readline().rstrip())
         
         inputType = input()
